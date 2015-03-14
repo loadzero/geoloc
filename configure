@@ -1,0 +1,27 @@
+#!/bin/bash
+
+set -e
+set -u
+
+function check_for()
+{
+    printf "checking for $1 ... "
+
+    if ! which "$1"; then
+
+        printf "failed\n"
+
+        echo "ERROR - could not find $1"
+        exit 1
+    fi
+}
+
+# this isn't a real autoconf script. it's much simpler.
+
+check_for iconv
+check_for unzip
+check_for wget
+check_for make
+check_for c++
+
+echo ok
