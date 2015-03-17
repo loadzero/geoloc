@@ -11,6 +11,8 @@
 #ifndef CSV_HPP_BE8C5A6D
 #define CSV_HPP_BE8C5A6D
 
+#include <vector>
+
 inline unsigned to_u(const char* s)
 {
     return strtoul(s, 0, 10);

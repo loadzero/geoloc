@@ -14,8 +14,10 @@
 #ifndef BLOCKS_HPP_57764690
 #define BLOCKS_HPP_57764690
 
-#include "csv.hpp"
 #include "error.hpp"
+#include "serialization.hpp"
+#include "connector.hpp"
+#include "csv.hpp"
 
 struct Block
 {

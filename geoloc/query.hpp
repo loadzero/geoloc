@@ -17,7 +17,11 @@
 
 #include "macros.hpp"
 #include "error.hpp"
+#include "blocks.hpp"
+#include "locations.hpp"
+#include "asns.hpp"
 #include "csv.hpp"
+#include "pipeline.hpp"
 
 #include <algorithm>
 
@@ -138,6 +142,11 @@ class GeoData
         }
 
         return -1;
+    }
+
+    unsigned location_block_query(unsigned quad) const
+    {
+        return block_query(location_ip_blocks_, quad);
     }
 
     void query(unsigned quad, IPResult &result) const
