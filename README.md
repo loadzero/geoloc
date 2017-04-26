@@ -33,15 +33,15 @@ $ wc -l /tmp/ip_list
 
 $ time geoloc -f /tmp/ip_list > /tmp/res1
 
-real	0m6.131s
-user	0m5.662s
+real    0m6.131s
+user    0m5.662s
 sys     0m0.369s
 
 $ time geoloc -q 8.8.8.8 192.30.252.131 > /tmp/res2
 
-real	0m0.010s
-user	0m0.002s
-sys	    0m0.005s
+real    0m0.010s
+user    0m0.002s
+sys     0m0.005s
 
 ```
 
@@ -82,13 +82,10 @@ of [mmap](http://en.wikipedia.org/wiki/Mmap).
 Design and Implementation
 =========================
 
-I plan to do a longer write-up on the design and implementation of the tool, 
-to share some C++ tips and tricks.
-
-The short version is that the code operates in two phases, packing and query. 
-The packing phase is all about converting the data into a machine optimal 
-format, namely relocatable sorted vectors. The query phase simply mmaps that 
-data, and performs a std::upper\_bound binary search on it to find the IPs.
+The code operates in two phases, packing and query. The packing phase is all
+about converting the data into a machine optimal format, namely relocatable
+sorted vectors. The query phase simply mmaps that data, and performs a
+std::upper\_bound binary search on it to find the IPs.
 
 There is an outline of the code, roughly in topological order 
 [here](outline.md), that contains a summary of each module.
