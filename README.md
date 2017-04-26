@@ -19,8 +19,7 @@ Query some IPs:
 ```
 $ geoloc -q 8.8.8.8 192.30.252.131 --headers | column -t
 
-ip              country  region  city           latitude  longitude  as_num   
-as_text
+ip              country  region  city           latitude  longitude  as_num   as_text
 8.8.8.8         US       CA      Mountain+View  37.3860   -122.0838  AS15169  Google+Inc.
 192.30.252.131  US       CA      San+Francisco  37.7697   -122.3933  AS36459  GitHub,+Inc.
 ```
