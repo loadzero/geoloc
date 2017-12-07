@@ -49,12 +49,11 @@ static int test_poddable_roundtrip()
             bar.b = 1000 + i;
             bar.c = 10000 + i;
 
-            char buf[64];
-            sprintf(buf, "str %d %d %d %d", (int) i, bar.a, bar.b, bar.c);
+            bar_vec.push_back(bar);
         }
 
         BinaryFile bf;
-
+        
         bf.open("tmp/foo.bin");
         bf.save_pod_vector(bar_vec);
     }
@@ -65,6 +64,7 @@ static int test_poddable_roundtrip()
     MappedVector<Poddable> foo;
     mf.load_mapped_vector(foo);
 
+    assert(foo.size() != 0);
     assert(foo.size() == bar_vec.size());
 
     for (size_t i = 0; i < bar_vec.size(); ++i)
