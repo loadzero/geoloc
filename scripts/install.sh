@@ -20,7 +20,7 @@ cp scripts/_geoloc_update.sh ~/bin
 # do a self test
 
 result=$(~/bin/geoloc -q 8.8.8.8)
-expected="8.8.8.8 US CA Mountain+View 37.3860 -122.0838 AS15169 Google+Inc."
+expected="8.8.8.8 US % % 37.7510 -97.8220 AS15169 Google+LLC"
 
 if [[ "$result" != "$expected" ]]; then
     echo "ERROR: unexpected self-test result"
