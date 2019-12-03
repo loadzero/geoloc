@@ -4,7 +4,7 @@ queries offline.
 
 Examples:
 
-Bulk lookup from apache access.log:
+Bulk lookup from apache `access.log`:
 
 ```
 $ cat access.log | awk '{print $1}' | geoloc -f - | column -t
