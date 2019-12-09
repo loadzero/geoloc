@@ -1,3 +1,6 @@
+
+Warning: This project is unmaintained (due to MaxMind API deprecation) and currently uses an old database from 2017
+
 geoloc is a command line tool for bulk geolocation queries written in C++. 
 Once its binary database has been built, ```geoloc``` performs geolocation 
 queries offline.
