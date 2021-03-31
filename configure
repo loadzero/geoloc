@@ -20,7 +20,7 @@ function check_for()
 
 check_for iconv
 check_for unzip
-check_for wget
+check_for curl
 check_for make
 check_for c++
 

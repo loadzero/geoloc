@@ -18,7 +18,7 @@ echo "downloading from loadzero"
 echo "warning: This geoip database is old (from 2017)"
 echo "warning: For experimental use only"
 
-wget http://blog.loadzero.com/assets/geodata.bin.gz
+curl -L -O http://blog.loadzero.com/assets/geodata.bin.gz
 gunzip geodata.bin.gz
 mkdir -p ~/var/db/geoloc
 mv geodata.bin ~/var/db/geoloc
