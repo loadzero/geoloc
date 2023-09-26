@@ -26,8 +26,8 @@ rm -rf "/tmp/geoloc.$tok"
 
 # Deprecated as of Jan 2019
 #
-#wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity_CSV/GeoLiteCity-latest.zip
-#wget http://download.maxmind.com/download/geoip/database/asnum/GeoIPASNum2.zip
+#wget https://geolite.maxmind.com/download/geoip/database/GeoLiteCity_CSV/GeoLiteCity-latest.zip
+#wget https://download.maxmind.com/download/geoip/database/asnum/GeoIPASNum2.zip
 #
 #blocks_file=$(unzip -l GeoLiteCity-latest.zip |grep City.Blocks.csv | awk '{print $4}')
 #dir=$(dirname $blocks_file)
